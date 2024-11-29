@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/stylecrud.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+   
+    <!-- <link rel="stylesheet" href="./Css/all.min.css"> -->
+    <title>BookMark</title>
+</head>
+<body>
+    <!-- <h1><i class="fa-solid fa-bookmark"></h1> -->
+        <section class="bookmark" >
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="py-2 ">Bookmarker</h1>
+    
+                        <div class=" bookmark-form py-4  mt-5">
+                           <div class="header w-100 p-3 py-4 d-flex flex-row justify-content-center gx-4">
+                               <i class="fa-solid fa-bookmark"style="padding-right:1rem;"></i>
+                               <h2>Bookmark your favorite sites</h2>
+                               <i class="fa-solid fa-bookmark "style="padding-left:1rem;"></i>
+                           </div>
+                           <div class="form mt-3">
+                               <p class="fs-6 fw-bold"><i class="fa-solid fa-bookmark"style="padding-right:1rem;"></i>Site Name</p>
+                               <div class="form-floating mb-3  ">
+                                   <input type="text" oninput="validationsite()" class="form-control " id="SiteName" placeholder="">
+                                   <label for="SiteName" class="fs-6">Bookmark Name</label>
+                   
+                                 </div>
+                                 <!-- //////// -->
+                                 <p class="fs-6 fw-bold"><i class="fa-solid fa-link"style="padding-right:1rem;"></i>Site URL </p>
+                                 <div class="form-floating mb-3  ">
+                                     <input type="text" oninput="validationUrl()" class="form-control" id="urlSite" placeholder="">
+                                     <label for="urlSite" class="fs-6">Websit URL</label>
+                                </div>
+                                <div class="btn1"> <button type="button" onclick="Adddata()"id="submit" class="btn btn-danger fs-5 text-white px-5">Submit</button></div>
+                               
+                           </div>
+                           
+                         
+                        </div>
+                        <table class="table text-center bg-light" >
+                           <thead>
+                               <tr>
+                                   <th scope="col">Index</th>
+                                   <th scope="col">Website Name</th>
+                                   <th scope="col">Visit</th>
+                                   <th scope="col">Delete</th>
+                               </tr>
+                           </thead>
+                           <tbody id="table">
+                           </tbody>
+                         </table>
+                    </div>
+                   
+                </div>
+               
+            </div>
+
+        </section>
+        <script src="./js/crud.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
